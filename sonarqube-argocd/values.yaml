@@ -24,7 +24,7 @@ sonarqube:
 
   initSysctl:
     enabled: true
-      vmMaxMapCount: 262144
+    vmMaxMapCount: 262144
 
   ingress:
     enabled: false
