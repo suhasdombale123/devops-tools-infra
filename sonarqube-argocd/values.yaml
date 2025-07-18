@@ -23,7 +23,14 @@ sonarqube:
       size: 5Gi
 
   initSysctl:
-    enabled: false
+    enabled: true
+      vmMaxMapCount: 262144
 
   ingress:
     enabled: false
+
+  elasticsearch:
+    javaOpts: "-Xms512m -Xmx512m"
+
+  sonarProperties:
+    sonar.web.javaAdditionalOpts: "-Xmx512m"
