@@ -1,0 +1,29 @@
+sonarqube:
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 500m
+      memory: 1Gi
+    requests:
+      cpu: 300m
+      memory: 512Mi
+
+  persistence:
+    enabled: true
+    storageClass: "local-path"
+    accessMode: ReadWriteOnce
+    size: 5Gi
+
+  postgresql:
+    enabled: true
+    postgresqlPassword: sonar
+    persistence:
+      enabled: true
+      storageClass: "local-path"
+      size: 5Gi
+
+  initSysctl:
+    enabled: false
+
+  ingress:
+    enabled: false
