@@ -1,0 +1,12 @@
+argo-cd:
+  fullnameOverride: argocd
+  server:
+    service:
+      type: NodePort
+      nodePortHttp: 32080
+      nodePortHttps: 32443
+    ingress:
+      enabled: false
+  configs:
+    timeout.reconciliation: 60s
+      

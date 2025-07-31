@@ -1,0 +1,9 @@
+apiVersion: v2
+name: argocd
+description: A minimal wrapper chart to deploy ArgoCD
+type: application
+version: 0.1.0
+dependencies:
+  - name: argo-cd
+    version: 8.2.0
+    repository: https://argoproj.github.io/argo-helm
